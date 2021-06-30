@@ -1,0 +1,50 @@
+<div class="container">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          Optimal Prices
+        </a>
+    </nav>
+    <div class="row">
+        <div class="col">
+            
+            <form [formGroup]="form" (ngSubmit)=optimal($event)>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Precio 1</label>
+                  <input formControlName= "precio1" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <br> <p>VS</p> <br>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Precio 2</label>
+                    <input formControlName= "precio2" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                
+               
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+
+        </div>
+        <div class="col">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr [ngSwitch]="price.is_optimum" *ngFor="let price of listPrice">
+                    <th scope="row">{{price.porcent}}</th>
+                    <td >{{price.price}}</td>
+                    <td *ngSwitchCase="true" style="background-color: green; color: white;" >{{price.status}}</td>
+                    <td *ngSwitchCase="false" style="background-color: red; color: white;" >{{price.status}}</td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+
+
