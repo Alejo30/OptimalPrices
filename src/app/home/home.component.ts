@@ -88,9 +88,7 @@ export class HomeComponent implements OnInit {
     this.price2 = this.newPrice.precio2;
     for (let index = 0; index < this.listPorcent.length; index++) {
        this.res = this.price1 * this.listPorcent[index];
-       console.log(index)
        this.listPrice[index].price = this.res
-       console.log(this.listPrice)
         if (this.res <= this.price2) {
          this.status = true
          var statusString = 'Optimo'
