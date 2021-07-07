@@ -28,6 +28,7 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
+                    <th scope="col">Gain</th>
                     <th scope="col">Price</th>
                     <th scope="col">Status</th>
                   </tr>
@@ -35,6 +36,7 @@
                 <tbody>
                   <tr [ngSwitch]="price.is_optimum" *ngFor="let price of listPrice">
                     <th scope="row">{{price.porcent}}</th>
+                    <td >{{price.gain}}</td>
                     <td >{{price.price}}</td>
                     <td *ngSwitchCase="true" style="background-color: green; color: white;" >{{price.status}}</td>
                     <td *ngSwitchCase="false" style="background-color: red; color: white;" >{{price.status}}</td>

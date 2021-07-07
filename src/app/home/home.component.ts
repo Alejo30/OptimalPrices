@@ -15,43 +15,95 @@ export class HomeComponent implements OnInit {
     1.15,
     1.2,
     1.25,
-    1.3
+    1.3,
+    1.35,
+    1.4,
+    1.45,
+    1.5
   ];
+
+  listG: Array<number> = [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5
+  ]
 
   listPrice : any[] = [
     {
       "porcent" : '5%',
       "price": 0,
+      "gain": 0,
       "status": '',
       "is_optimum": ''
     },
     {
       "porcent" : '10%',
       "price": 0,
+      "gain": 0,
       "status": '',
       "is_optimum": ''
     },
     {
       "porcent" : '15%',
       "price": 0,
+      "gain": 0,
       "status": '',
       "is_optimum": ''
     },
     {
       "porcent" : '20%',
       "price": 0,
+      "gain": 0,
       "status": '',
       "is_optimum": ''
     },
     {
       "porcent" : '25%',
       "price": 0,
+      "gain": 0,
       "status": '',
       "is_optimum": ''
     },
     {
       "porcent" : '30%',
       "price": 0,
+      "gain": 0,
+      "status": '',
+      "is_optimum": ''
+    }
+    ,
+    {
+      "porcent" : '35%',
+      "price": 0,
+      "gain": 0,
+      "status": '',
+      "is_optimum": ''
+    },
+    {
+      "porcent" : '40%',
+      "price": 0,
+      "gain": 0,
+      "status": '',
+      "is_optimum": ''
+    },
+    {
+      "porcent" : '45%',
+      "price": 0,
+      "gain": 0,
+      "status": '',
+      "is_optimum": ''
+    },
+    {
+      "porcent" : '50%',
+      "price": 0,
+      "gain": 0,
       "status": '',
       "is_optimum": ''
     }
@@ -60,7 +112,8 @@ export class HomeComponent implements OnInit {
   price1: number = 0;
   price2: number = 0;
   status!: boolean; 
-  res: number = 0;
+  priceFinal: number = 0;
+  priceSub: number = 0;
   constructor(
     private formBuilder: FormBuilder,
     
@@ -87,9 +140,11 @@ export class HomeComponent implements OnInit {
     this.price1 = this.newPrice.precio1;
     this.price2 = this.newPrice.precio2;
     for (let index = 0; index < this.listPorcent.length; index++) {
-       this.res = this.price1 * this.listPorcent[index];
-       this.listPrice[index].price = this.res
-        if (this.res <= this.price2) {
+       this.priceSub  = this.price1 * this.listG[index]
+       this.priceFinal = this.price1 * this.listPorcent[index];
+       this.listPrice[index].price = this.priceFinal
+       this.listPrice[index].gain = this.priceSub
+        if (this.priceFinal <= this.price2) {
          this.status = true
          var statusString = 'Optimo'
          this.listPrice[index].status = statusString
