@@ -19,7 +19,18 @@ export class HomeComponent implements OnInit {
     1.35,
     1.4,
     1.45,
-    1.5
+    1.5,
+    1.55,
+    1.6,
+    1.65,
+    1.7,
+    1.75,
+    1.8,
+    1.85,
+    1.9,
+    1.95,
+    2
+
   ];
 
   listG: Array<number> = [
@@ -32,7 +43,17 @@ export class HomeComponent implements OnInit {
     0.35,
     0.4,
     0.45,
-    0.5
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95,
+    1
   ]
 
   listPrice : any[] = [
@@ -102,6 +123,76 @@ export class HomeComponent implements OnInit {
     },
     {
       "porcent" : '50%',
+      "price": 0,
+      "gain": 0,
+      "status": '',
+      "is_optimum": ''
+    },
+    {
+      "porcent" : '55%',
+      "price": 0,
+      "gain": 0,
+      "status": '',
+      "is_optimum": ''
+    },
+    {
+      "porcent" : '60%',
+      "price": 0,
+      "gain": 0,
+      "status": '',
+      "is_optimum": ''
+    },
+    {
+      "porcent" : '65%',
+      "price": 0,
+      "gain": 0,
+      "status": '',
+      "is_optimum": ''
+    },
+    {
+      "porcent" : '70%',
+      "price": 0,
+      "gain": 0,
+      "status": '',
+      "is_optimum": ''
+    },
+    {
+      "porcent" : '75%',
+      "price": 0,
+      "gain": 0,
+      "status": '',
+      "is_optimum": ''
+    },
+    {
+      "porcent" : '80%',
+      "price": 0,
+      "gain": 0,
+      "status": '',
+      "is_optimum": ''
+    },
+    {
+      "porcent" : '85%',
+      "price": 0,
+      "gain": 0,
+      "status": '',
+      "is_optimum": ''
+    },
+    {
+      "porcent" : '90%',
+      "price": 0,
+      "gain": 0,
+      "status": '',
+      "is_optimum": ''
+    },
+    {
+      "porcent" : '95%',
+      "price": 0,
+      "gain": 0,
+      "status": '',
+      "is_optimum": ''
+    },
+    {
+      "porcent" : '100%',
       "price": 0,
       "gain": 0,
       "status": '',
